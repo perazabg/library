@@ -7,6 +7,29 @@
     <script src="main.js"></script>
 </head>
 <body>
-    
+    <div class="header"></div>
+<div class="bookshelf">
+  <dialog id="dialog">
+    <form>
+      <div class="formTitle">
+        <label for="title">Title: </label>
+        <input type="text" id="title" name="title">
+      </div>
+      <div class="formAuthor">
+        <label for="author">Author: </label>
+        <input type="text" id="author" name="author">
+      </div>
+      <div class="formPages">
+        <label for="pages">Pages: </label>
+        <input type="number" id="pages" name="pages" min="1" max="999">
+      </div>
+      <div class="formRead">
+        <label for="read">Have you read it? </label>
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </div>
+    </form>
+  </dialog>
+</div>
 </body>
 </html>
