@@ -1,5 +1,18 @@
-const myLibrary = [];
+const myLibrary = [
+  {
+    title: "",
+    author: "",
+    pages: 69,
+    read: false
+  }
+];
+const btn = document.getElementById('btn');
+const dialog = document.getElementById('dialog');
 
+//show dialog via button
+btn.addEventListener('click', () => {
+  dialog.showModal();
+})
 // book constructor 
 function book(title, author, pages, read){
   this.title = title;
@@ -10,7 +23,11 @@ function book(title, author, pages, read){
 
 function  addBook(){
   // need to get book info first 
-  const newBook = new book()
+  let title = $titleInput.value;
+  let author = $authorInput.value;
+  let pages = $pagesInput.value;
+  let read = getReadValue();
+  let newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
 }
 
