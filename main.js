@@ -1,17 +1,22 @@
 const myLibrary = [
   {
-    title: "",
-    author: "",
+    title: "title",
+    author: "author",
     pages: 69,
     read: false
   }
 ];
-const btn = document.getElementById('btn');
+const openBtn = document.getElementById('openBtn');
 const dialog = document.getElementById('dialog');
+const closeBtn = document.getElementById('closeBtn')
 
 //show dialog via button
-btn.addEventListener('click', () => {
+openBtn.addEventListener('click', () => {
   dialog.showModal();
+})
+
+closeBtn.addEventListener('click', () => {
+  dialog.close();
 })
 // book constructor 
 function book(title, author, pages, read){
