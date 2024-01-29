@@ -34,7 +34,6 @@ Book.prototype.toggleRead = function () {
 };
 
 function toggleRead(index) {
-  console.log("toggleRead");
   myLibrary[index].toggleRead();
   renderLibrary();
 }
